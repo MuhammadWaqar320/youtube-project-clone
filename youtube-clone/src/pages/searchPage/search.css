@@ -1,0 +1,24 @@
+.search-page-class
+{
+    display: flex;
+    margin-top: 46px
+}
+.side-bar-class
+{
+    width: 15%;
+    padding-top: 1%;
+
+}
+.content-class
+{
+    width: 85%;
+
+    padding: 1%;
+    
+
+}
+.content-sub-class
+{
+    background: #f8f8f8;
+    padding: 1.5%;
+}

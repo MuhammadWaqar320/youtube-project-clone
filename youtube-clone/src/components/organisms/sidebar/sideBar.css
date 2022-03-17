@@ -1,0 +1,27 @@
+
+  .side-nav
+  {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin:15px 0;
+     
+
+  }
+  .side-main
+  {
+    overflow-y: hidden;
+    max-height: 660px;
+   
+
+  }
+
+ .side-nav p{
+     margin-left: 25px;
+ }
+ .side-main:hover
+ {
+  overflow-y: scroll;
+  max-height: 660px;
+ }
+ 

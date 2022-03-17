@@ -1,0 +1,12 @@
+.upload-form
+{
+    padding:5%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(51, 50, 50);
+  
+}
+.form-class
+{
+    text-align: center;
+}

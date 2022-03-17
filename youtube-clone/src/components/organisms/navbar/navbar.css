@@ -1,0 +1,95 @@
+.nav-bar
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5vw;
+
+}
+.logo
+{
+    height: 25px;
+    margin-left: 25px;
+}
+.toggle-btn
+{
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}
+.search-box
+{
+    position: relative;
+    display: flex;
+    height: 40px;
+    width: 1200px;
+    max-width: 500px;
+}
+.search-bar
+{
+    width: 85%;
+    border: 1px solid #dbdbdb;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.search-btn
+{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f0f0f0;
+    border: 1px solid #dbdbdb;
+    border-left: none;
+    align-items: center;
+}
+.search-icon
+{
+    font-size: 20px;
+}
+.user-options
+{
+    height: 35px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+.user-icon
+{
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.user-profile-pic
+{
+   height: 40px;
+   width: 40px;
+
+   cursor: pointer;
+
+   margin-right: 100px;
+}
+.user-profile-pic img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.mic
+{
+margin-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+    background: rgb(245, 243, 243);
+    border-radius: 50px;
+}

@@ -1,0 +1,27 @@
+.upload-class
+{
+    margin-top: 60px;
+    display: flex;
+    background-color: green;
+}
+.flex-item1,.flex-item3
+{
+    width: 30%;
+    background-color: blue;
+
+}
+.flex-item2
+{
+    width: 40%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 460px;
+align-items: center;
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}

@@ -1,0 +1,9 @@
+.chip-nav
+{
+    border-bottom: 1px solid #dbdbdb;
+    background: white;
+    height: 60px;
+    display: flex;
+    padding-left: 20px;
+    overflow-x: auto;
+}
