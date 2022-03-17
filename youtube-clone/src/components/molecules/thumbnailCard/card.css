@@ -46,6 +46,10 @@
     font-size: 20px;
     font-weight: bold;
   }
+  .overlayChild
+  {
+    display: flex;
+  }
   .author img {
     object-fit: cover;
     border-radius: 50%;

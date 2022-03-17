@@ -12,6 +12,7 @@ const UploadvideoComponent = () => {
   let navigate =useNavigate ();
   let timestamp=Date.now();
   const logo="https://cdn1.iconfinder.com/data/icons/online-video-creation/64/upload_video_content_to_youtube_website-512.png";
+  const endpoint='http://localhost:5000/video/insert';
   const SaveVideoIntoDb=async(e)=>
   {
         e.preventDefault()
@@ -19,7 +20,7 @@ const UploadvideoComponent = () => {
         form_data.append('title',title);
         form_data.append('image',image);
         form_data.append('timestamps',timestamp);
-       await axios.post('http://localhost:5000/video/insert',form_data,{headers:{'content-type': 'multipart/form-data' }}).then(()=>
+       await axios.post(endpoint,form_data,{headers:{'content-type': 'multipart/form-data' }}).then(()=>
        {
          window.alert("Video uploaded successfully")
          navigate("/")
