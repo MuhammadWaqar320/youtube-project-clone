@@ -2,8 +2,11 @@ import React from "react";
 
 import { GrHome } from "react-icons/gr";
 import { AiOutlineUpload} from "react-icons/ai";
-import { MdOutlineExplore, MdOutlineSubscriptions,MdOutlineVideoLibrary,MdOutlineWatchLater } from "react-icons/md";
+import { MdOutlineExplore, MdOutlineSubscriptions,MdOutlineVideoLibrary,MdOutlineWatchLater,MdOutlineExpandMore } from "react-icons/md";
 import { RiVideoLine     } from "react-icons/ri";
+
+import { FcExpand} from "react-icons/fc";
+
 import { BiLike    } from "react-icons/bi";
 import {GrHistory} from "react-icons/gr";
 import HrLine from "../../atoms/horizontalLine/hrLine";
@@ -32,6 +35,7 @@ const SideBar = () => {
         <SideBarList title="Upload" icon={<AiOutlineUpload />} toNavigate='/upload' />
         <SideBarList title="Watch Later" icon={<MdOutlineWatchLater />} toNavigate='/' />
         <SideBarList title="Liked" icon={<BiLike />} toNavigate='/' />
+        <SideBarList title="Show more" icon={<FcExpand color="red"/>} toNavigate='/' />
       </div>
       <HrLine />
       <div className="side-nav">

@@ -18,14 +18,12 @@ const ChipNav = ({title}) => {
 
       }
       const uniqueChipList= Array.from(new Set(chipListArray))
-      const _chiplistData=uniqueChipList.unshift("All")
+      uniqueChipList.unshift("All")
       setChiplist(uniqueChipList)
-
    } catch (error) {
        console.log(error.message)
    }
   }
-
   useEffect(()=>
   {
       getVideosFromDb()

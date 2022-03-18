@@ -7,10 +7,11 @@ import Home from './pages/homePage/home';
 import UploadVideo from './pages/uploadVideoPage/uploadVideo';
 import Explore from './pages/explorePage/explore';
 import CategoryPage from './pages/category/categoryPage';
+
 const  App=()=> {
   return (
-
-    <Routes>
+<div className='App'>
+<Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/search/:keyword" element={<Search />} />
       <Route path="/category/:title" element={<CategoryPage />} />
@@ -18,6 +19,8 @@ const  App=()=> {
       <Route path="/upload" element={<UploadVideo/>} />
       <Route path="/explore" element={<Explore/>} />
     </Routes>
+</div>
+  
   );
 }
 

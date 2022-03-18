@@ -7,7 +7,7 @@ import './home.css'
 const Home=()=>
 {
   return (
-  <>
+  <div className='home-main-class'>
     <Navbar/>
    <div className='home-page-class'>
      <div className='side-bar-class'>
@@ -29,7 +29,7 @@ const Home=()=>
 
    </div>
  
-  </>
+  </div>
   
 
   )

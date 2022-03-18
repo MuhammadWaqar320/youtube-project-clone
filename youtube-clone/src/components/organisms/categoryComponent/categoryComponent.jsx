@@ -35,7 +35,7 @@ const CategoryComponent = ({title}) => {
             {
                 return(<>
               
-                 <Card timestamp={moment(parseInt(item.timestamps)).fromNow()}  title={item.title} image={item.image} />
+                 <Card timestamp={moment(parseInt(item.timestamps)).fromNow()}  title={item.title} image={item.image} author={item.author} />
 
                 </>)
             })

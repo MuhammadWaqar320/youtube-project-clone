@@ -9,7 +9,7 @@ const SingleChip = ({title,title_param}) => {
     <div className={`single-chip`}>
     
     <Link to={`/category/${title}`} className={`chip ${title==title_param?"chip-active":""}`}>
-        {title}
+        {title.substring(0,7)}
     </Link>
     </div>
   )

@@ -12,8 +12,8 @@ export const getAllVideos=async(req,res)=>
 }
 export const insertVideo=async(req,res)=>
 {
-    const {title,timestamps}=req.body;
-    const newVideo=VideoModel({title:title,image:`http://localhost:5000/image/${req.file.filename}`,timestamps:timestamps});
+    const {title,timestamps,author}=req.body;
+    const newVideo=VideoModel({title:title,image:`http://localhost:5000/image/${req.file.filename}`,timestamps:timestamps,author:author});
     try {
         await newVideo.save();
         res.status(201).json({message:"video added"})

@@ -50,18 +50,36 @@
   {
     display: flex;
   }
-  .author img {
+  .author-img {
     object-fit: cover;
     border-radius: 50%;
     height: 40px;
     width: 40px;
     margin-right: 10px;
   }
+  .views
+  {
+    font-size: 14px;
+  }
   .details
   {
       padding: 5px;
   }
+  .check
+  {
+    margin-top: 15px;
+    font-size: 20px;
+    margin-left: 5px;
+  }
   .timestamp
   {
-    float:'right';
+    float: right;
+  }
+  .author
+  {
+    display: flex;
+  }
+  .author span{
+    margin-top: 10px;
+    font-weight: bold;
   }

@@ -9,10 +9,12 @@ import axios from 'axios';
 const UploadvideoComponent = () => {
   const [title,setTitle]=useState("")
   const [image,setImage]=useState("")
+  const [author,setAuthor]=useState("")
   let navigate =useNavigate ();
   let timestamp=Date.now();
   const logo="https://cdn1.iconfinder.com/data/icons/online-video-creation/64/upload_video_content_to_youtube_website-512.png";
   const endpoint='http://localhost:5000/video/insert';
+
   const SaveVideoIntoDb=async(e)=>
   {
         e.preventDefault()
@@ -20,6 +22,7 @@ const UploadvideoComponent = () => {
         form_data.append('title',title);
         form_data.append('image',image);
         form_data.append('timestamps',timestamp);
+        form_data.append('author',author)
        await axios.post(endpoint,form_data,{headers:{'content-type': 'multipart/form-data' }}).then(()=>
        {
          window.alert("Video uploaded successfully")
@@ -32,8 +35,8 @@ const UploadvideoComponent = () => {
       <form className='form-class' onSubmit={SaveVideoIntoDb}>
           <Uploadlogo _img={logo} />
           <Input type="text" value={title} placeholder="Enter video title" onchange={(e)=>setTitle(e.target.value)}  label="Title"  /><br></br>
+          <Input type="text" value={author} placeholder="Enter video title" onchange={(e)=>setAuthor(e.target.value)}  label="Name"  /><br></br>
           <Input type="file"  placeholder="" label="Image" onchange={(e)=>setImage(e.target.files[0])}   />
-     
           <Button label="Upload" type="submit"/>
       </form>
     </div>

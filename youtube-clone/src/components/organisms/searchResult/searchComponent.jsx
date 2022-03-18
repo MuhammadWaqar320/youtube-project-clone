@@ -39,12 +39,12 @@ const SearchComponent = ({title}) => {
                     {
                         return(<>
                    
-                         <Card timestamp={moment(parseInt(item.timestamps)).fromNow()} title={item.title} image={item.image} />
+                         <Card timestamp={moment(parseInt(item.timestamps)).fromNow()} title={item.title} image={item.image} author={item.author} />
         
                         </>)
                     }):
                     isDisplayed?
-                    <NoResult content="sorry " /> :
+                    <NoResult content="Sorry dit not match try again with different keywords " /> :
                     <span></span>  
                     }
                     

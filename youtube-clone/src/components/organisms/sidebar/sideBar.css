@@ -24,4 +24,19 @@
   overflow-y: scroll;
   max-height: 660px;
  }
+ .side-main::-webkit-scrollbar
+ {
+   width: 8px;
+ }
+ .side-main::-webkit-scrollbar-track
+ {
+   border-radius: 10px;
+ }
+ .side-main::-webkit-scrollbar-thumb
+ {
+  background-color: rgb(169, 167, 167);
+  border-radius: 10px;
+  width: 8px;
+  
+ }
  
