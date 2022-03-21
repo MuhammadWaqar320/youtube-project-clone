@@ -5,6 +5,10 @@
     margin-bottom: 14px;
     border: 1px solid #f7f5f5;
     background-color: white;
+    text-decoration: none;
+    color: black;
+  align-items: left;
+    
   }
   .thumbnail {
     width: auto;

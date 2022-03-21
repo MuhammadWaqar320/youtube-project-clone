@@ -4,29 +4,23 @@ import axios from 'axios';
 import { useState } from 'react';
 import Card from '../../molecules/thumbnailCard/card';
 import moment from 'moment';
+import { useSelector } from 'react-redux';
 const CategoryComponent = ({title}) => {
-    const endpoint="http://localhost:5000/video/get";
+    const AllVideos=useSelector((state)=>state.AllVideos.allVideos)
     const [videos,setVideos]=useState([])
-   
-    const getVideosFromDb=async()=>
+    const Category=()=>
     {
-     try {
-        const {data}=await axios.get(endpoint)
         let filterdData;
         if(title=="All"){
-           filterdData=data;
+           filterdData= AllVideos;
         }else{
-            filterdData=data.filter(item=>item.title==title)
+            filterdData= AllVideos.filter(item=>item.title==title)
         }
         setVideos(filterdData)
-        console.log(videos)
-     } catch (error) {
-         console.log(error.message)
-     }      
     }
     useEffect(()=>
     {
-        getVideosFromDb()
+        Category()
     })
   return (
     <div className="video-section">
@@ -35,8 +29,8 @@ const CategoryComponent = ({title}) => {
             {
                 return(<>
               
-                 <Card timestamp={moment(parseInt(item.timestamps)).fromNow()}  title={item.title} image={item.image} author={item.author} />
-
+                 <Card timestamp={moment(parseInt(item.timestamps)).fromNow()} id={item._id} title={item.title} image={item.image} author={item.author} />
+ 
                 </>)
             })
         }

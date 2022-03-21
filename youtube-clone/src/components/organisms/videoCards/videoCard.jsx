@@ -3,32 +3,19 @@ import axios from 'axios';
 import { useState } from 'react';
 import './videoCard.css';
 import Card from '../../molecules/thumbnailCard/card';
+import {useSelector } from 'react-redux';
 import moment from 'moment';
 const VideoCard = () => {
-    const endpoint="http://localhost:5000/video/get";
-    const [videos,setVideos]=useState([])
-    const getVideosFromDb=async()=>
-    {
-     try {
-        const allVideos=await axios.get(endpoint)
-        setVideos(allVideos.data)
-        console.log(videos)
-     } catch (error) {
-         console.log(error.message)
-     }      
-    }
-    useEffect(()=>
-    {
-        getVideosFromDb()
-    },[])
+
+    const videosData= useSelector((state)=>state.AllVideos.allVideos);
   return (
     <div className="video-section">
         {
-            videos.map((item)=>
+            videosData.map((item)=>
             {
                 return(<>
               
-                 <Card timestamp={moment(parseInt(item.timestamps)).fromNow()} title={item.title} image={item.image} author={item.author} />
+                 <Card timestamp={moment(parseInt(item.timestamps)).fromNow()} title={item.title} id={item._id} image={item.image} author={item.author} />
 
                 </>)
             })

@@ -6,29 +6,20 @@ import { useEffect } from 'react';
 import moment from 'moment';
 import NoResult from '../../atoms/notFound/noResult';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 const SearchComponent = ({title}) => {
-    const endpoint="http://localhost:5000/video/get";
     const [videos,setVideos]=useState([])
+    const videosData=useSelector((state)=>state.AllVideos.allVideos)
     const [isDisplayed,setIsDisplayed]=useState(false)
-    const first3Char=title.substring(0,3)
-    const getVideosFromDb=async()=>
+    const filteredData=async()=>
     {
-     try {
-        const {data}=await axios.get(endpoint)
-        let searchedResult=data.filter(item=>item.title.startsWith(first3Char))
-        setVideos(searchedResult)
-        console.log(first3Char)
-     } catch (error) {
-         console.log(error.message)
-     }      
+        const first3Char=title.substring(0,3)
+        let searchedResult=videosData.filter(item=>item.title.startsWith(first3Char))
+        setVideos(searchedResult);
     }
     useEffect(()=>
     {
-        getVideosFromDb()
-        setTimeout(()=>
-        {
-            setIsDisplayed(true)
-        },1200)
+        filteredData();
     })
         return (
             
@@ -39,13 +30,11 @@ const SearchComponent = ({title}) => {
                     {
                         return(<>
                    
-                         <Card timestamp={moment(parseInt(item.timestamps)).fromNow()} title={item.title} image={item.image} author={item.author} />
+                         <Card timestamp={moment(parseInt(item.timestamps)).fromNow()} title={item.title} id={item._id} image={item.image} author={item.author} />
         
                         </>)
                     }):
-                    isDisplayed?
-                    <NoResult content="Sorry dit not match try again with different keywords " /> :
-                    <span></span>  
+                    <NoResult content="Sorry dit not match try again with different keywords " />
                     }
                     
                 </div>

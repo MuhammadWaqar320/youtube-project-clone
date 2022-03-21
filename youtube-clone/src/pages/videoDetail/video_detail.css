@@ -1,0 +1,18 @@
+.detail-clas
+{
+    display: flex;
+    padding: 90px 100px;
+    background: linear-gradient(#f7f5f5,white);
+    flex-direction: row;
+    height: auto;
+}
+.play-video-class
+{
+    width: 69%;
+    margin-right: 12px;
+}
+.right-videos-list
+{
+    width: 31%;
+    margin-left: 12px;
+}
